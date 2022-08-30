@@ -54,7 +54,8 @@ print("Starting:","Mem: {:.2f}G".format(psutil.virtual_memory()[1]/1000000000))
 def get_demogs(frompath):
     """
     This function retrieves the following major variables from the Census' American
-    Community Survey, 5-Year Estimates:
+    Community Survey, 5-Year Estimates available here
+    https://www2.census.gov/geo/tiger/TIGER_DP/2019ACS/:
         B01003e1    Population total                        B19013e1    Median Household Income                 B02001e1    Race basis                          
         B01001e1    Population total (within Age Sex)       B19001e1    Income basis                            B02001e2    White alone                         
         B01001e2    Male                                    B19001e2    Less than $10 000                       B02001e3    Black or African American alone     
