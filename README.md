@@ -1,8 +1,6 @@
 # blockgroupdemographics
 A combination of the TIGER/Line and ACS 5YR publications from the US Census Bureau.
 
-"""
-# blockgroupdemographics
 ## Overview
 ---
 This progran re-shares cartographic and demographic data from the U.S. Census Bureau 
