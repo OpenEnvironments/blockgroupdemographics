@@ -44,17 +44,18 @@ bgv = pd.read_csv('D:\\Open Environments\\data\\Open Environments\\blockgroupvot
                  converters={'BLOCKGROUP_GEOID': '{:0>12}'.format})
 # This demographic and  derived dataset
 bgd = pd.read_csv('C:\\Users\\michael\\Documents\\2019blockgroupdemographics.csv',
-                 converters={'GEOID': '{:0>12}'.format}, index=False)
+                 converters={'GEOID': '{:0>12}'.format})
 # The cartographic shapes of each block group
-bgc = gpd.read_picle('C:\\Users\\michael\\Documents\\2019blockgroupdemographics-geometry.pkl')
+bgc = pd.read_pickle('C:\\Users\\michael\\Documents\\2019blockgroupdemographics-geometry.pkl')
 
 # What proportion of voters voted Republican in the 2020 election
 mix1 = pd.merge(bgc,bgv, left_on='GEOID', right_on="BLOCKGROUP_GEOID",  how='left')
 mix2 = pd.merge(mix1,bgd, on='GEOID', how='left')
 mix2["RepRate"] = mix2.REP / (mix2.REP + mix2.DEM)
 
-geoplot.choropleth(mix2[~mix2.STATE.isin(["HI","AK"])],
-                   hue="RepRate", cmap="Reds", 
+geoplot.choropleth(mix2[(~mix2.STATE.isin(["HI","AK"])) # exclude Alaska & Hawaii visually
+                       & (mix2.B01001e1 < 5000)],       # exclude the extreme 1%
+                   hue="B01001e1", cmap="Reds", 
                    figsize=(15,7), legend=True,
                    linewidth=0)
 ```
@@ -148,14 +149,15 @@ def get_demogs(frompath):
               'ACS_2019_5YR_BG.ALAND', 'ACS_2019_5YR_BG.AWATER', 'ACS_2019_5YR_BG.INTPTLAT', 'ACS_2019_5YR_BG.INTPTLON']
     acs = gpd.read_file(frompath,
           layer = frompath[frompath.rfind("/")+1:frompath.rfind(".")])[["GEOID","geometry"]] 
+    acs["GEOID"] = acs.GEOID.str[-12:]  # original formats GEOID like 15000US721537506022
     # Open each layer, then collect the variables in it
     for l in set([v[:v.index(".")] for v in varlist]):  # Unique layers in the var list
         print("    Opening layer",l)
         layercols = [c[c.index('.')+1:] for c in varlist if c[:c.index('.')] == l]
         layercols.extend(["GEOID"])
         layercombined = gpd.read_file(frompath, layer = l)[layercols]
+        layercombined["GEOID"] = layercombined.GEOID.str[-12:]  # original formats GEOID like 15000US721537506022
         acs = acs.merge(layercombined, on='GEOID', how='left')
-    acs["GEOID"] = acs.GEOID.str[-12:]  # original formats GEOID like 15000US721537506022
     return acs
 
 def derive_elements(df):
