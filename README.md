@@ -1,66 +1,25 @@
 # blockgroupdemographics
-A combination of the TIGER/Line and ACS 5YR publications from the US Census Bureau.
+A selection of variables from the US Census Bureau's American Community Survey 5YR and TIGER/Line publications.
 
 ## Overview
 ---
-This progran re-shares cartographic and demographic data from the U.S. Census Bureau 
-to provide an obvious supplement to Open Environments Block Group publications.
-These results do not reflect any proprietary or predictive model. Rather, they extract from
-Census Bureau results with some proportions and aggregation rules applied. For additional
-support or more detail, please see the Census Bureau citations below.
+The U.S. Census Bureau published it's American Community Survey 5 Year with more than 37,000 variables. Most ACS advanced users will have their personal list of favorites, but this conventional wisdom is not available to occasional analysts. This publication re-shares 174 select demographic data from the U.S. Census Bureau to provide an supplement to Open Environments Block Group publications. These results do not reflect any proprietary or predictive model. Rather, they extract from Census Bureau results. For additional support or more detail, please see the Census Bureau citations below.
 
-Cartographics refer to shapefiles shared in the Census TIGER/Line publications. Block
-Group areas are updated annually, with major revisions accompanying the Decennial Census
-at the turn of each decade. These shapes are useful for visualizing estimates as a
-map and relating geographies based upon geo-operations like overlapping. This data is
-kept in a geodatabase file format and requires the geopandas package and its supporting
-fiona and DAL software.
+The first 170 demographic variables are taken from popular variables in the American Community Survey (ACS) including age, race, income, education and family structure. A full list of ACS variable names and definitions can be found in the ACS 'Table Shells' here https://www.census.gov/programs-surveys/acs/technical-documentation/table-shells.html.
 
-Demographics are taken from popular variables in the American Community Survey (ACS)
-including age, race, income, education and family structure. This data simply requires
-csv reader software or pythons pandas package.
+The dataset includes 4 additional columns from the Census' TIGER/Line publication. See Open Environment's **2023blockgroupcartographics** publication for the shapes of each block group. For each block group, the dataset includes land area (ALAND), water area (AWATER), interpolated latitude (INTPTLAT) and longitude (INTPTLON). These are valuable for calculating population density variables which combine ACS populations and TIGER land area.
 
 ## Files
-While the demographic data has many columns, the cartographic data has a very, very 
-large column called "geometry" storing the many-point boundaries of each shape. So,
-this process saves the data separately, with demographics columns in a csv file named 
-YYYYblcokgroupdemographics.csv. The cartographic column, 'geometry', is shared as 
-file named YYYYblockgroupdemographics-geometry.pkl. This file needs an installation 
-of geopandas, fiona and DAL software.
+The resulting dataset is available with other block group based datasets on Harvard's Dataverse https://dataverse.harvard.edu/ in Open Environment's Block Group Dataverse https://dataverse.harvard.edu/dataverse/blockgroupdatasets/.
 
-More details on the ACS variables selected and derivation rules applied can be found in
-the commentary docstrings of the functions below.
+This data simply requires csv reader software or pythons pandas package. 
 
-## Demonstration
-```
-import pandas as pd
-import numpy as np
-import geopandas as gpd
-import geoplot
+Supporting the data file, is **acsvars.csv**, a list of the Census variable names and their corresponding description. 
 
-# The Block Group Voting dataset
-bgv = pd.read_csv('D:\\Open Environments\\data\\Open Environments\\blockgroupvoting\\2019\\2019blockgroupvoting.csv',
-                 converters={'BLOCKGROUP_GEOID': '{:0>12}'.format})
-# This demographic and  derived dataset
-bgd = pd.read_csv('C:\\Users\\michael\\Documents\\2019blockgroupdemographics.csv',
-                 converters={'GEOID': '{:0>12}'.format}, index=False)
-# The cartographic shapes of each block group
-bgc = gpd.read_picle('C:\\Users\\michael\\Documents\\2019blockgroupdemographics-geometry.pkl')
-
-# What proportion of voters voted Republican in the 2020 election
-mix1 = pd.merge(bgc,bgv, left_on='GEOID', right_on="BLOCKGROUP_GEOID",  how='left')
-mix2 = pd.merge(mix1,bgd, on='GEOID', how='left')
-mix2["RepRate"] = mix2.REP / (mix2.REP + mix2.DEM)
-
-geoplot.choropleth(mix2[~mix2.STATE.isin(["HI","AK"])],
-                   hue="RepRate", cmap="Reds", 
-                   figsize=(15,7), legend=True,
-                   linewidth=0)
-```
-
-## Citations:
+## Citations
 ---
-  “TIGER/Line and TIGER-Related Products Electronic Resource: TIGER, Topologically Integrated Geographic Encoding and Referencing System.” Index of /Geo/Tiger/TIGER2019/BG, U.S. Census Bureau, 10 Feb. 2022, https://www2.census.gov/geo/tiger/TIGER2019/BG/. 
-  “American Community Survey 5-Year Data (2009-2020).” Census.gov, US Census Bureau, 8 Mar. 2022, https://www.census.gov/data/developers/data-sets/acs-5year.html. 
-  Bryan, Michael, 2022, "U.S. Voting by Census Block Groups", https://doi.org/10.7910/DVN/NKNWBX, Harvard Dataverse, V3, UNF:6:OlQ9kJRJ1BDUEYRNlqusJA== [fileUNF]
+“American Community Survey 5-Year Data (2019-2023).” Census.gov, US Census Bureau, https://www.census.gov/data/developers/data-sets/acs-5year.html. 2023 
 
+"American Community Survey, Table Shells and Table List” Census.gov, US Census Bureau, https://www.census.gov/programs-surveys/acs/technical-documentation/table-shells.html
+
+Python Package Index - PyPI. Python Software Foundation. "A simple wrapper for the United States Census Bureau’s API.". Retrieved from https://pypi.org/project/census/

@@ -1,0 +1,171 @@
+acsformat,otherformat,description
+B01001_001E,B01001e1,Population total
+B01001_002E,B01001e2,Male
+B01001_003E,B01001e3,Male Under 5 years
+B01001_004E,B01001e4,Male 5 to 9 years
+B01001_005E,B01001e5,Male 10 to 14 years
+B01001_006E,B01001e6,Male 15 to 17 years
+B01001_007E,B01001e7,Male 18 and 19 years
+B01001_008E,B01001e8,Male 20 years
+B01001_009E,B01001e9,Male 21 years
+B01001_010E,B01001e10,Male 22 to 24 years
+B01001_011E,B01001e11,Male 25 to 29 years
+B01001_012E,B01001e12,Male 30 to 34 years
+B01001_013E,B01001e13,Male 35 to 39 years
+B01001_014E,B01001e14,Male 40 to 44 years
+B01001_015E,B01001e15,Male 45 to 49 years
+B01001_016E,B01001e16,Male 50 to 54 years
+B01001_017E,B01001e17,Male 55 to 59 years
+B01001_018E,B01001e18,Male 60 and 61 years
+B01001_019E,B01001e19,Male 62 to 64 years
+B01001_020E,B01001e20,Male 65 and 66 years
+B01001_021E,B01001e21,Male 67 to 69 years
+B01001_022E,B01001e22,Male 70 to 74 years
+B01001_023E,B01001e23,Male 75 to 79 years
+B01001_024E,B01001e24,Male 80 to 84 years
+B01001_025E,B01001e25,Male 85 years and over
+B01001_026E,B01001e26,Female
+B01001_027E,B01001e27,Female Under 5 years
+B01001_028E,B01001e28,Female 5 to 9 years
+B01001_029E,B01001e29,Female 10 to 14 years
+B01001_030E,B01001e30,Female 15 to 17 years
+B01001_031E,B01001e31,Female 18 and 19 years
+B01001_032E,B01001e32,Female 20 years
+B01001_033E,B01001e33,Female 21 years
+B01001_034E,B01001e34,Female 22 to 24 years
+B01001_035E,B01001e35,Female 25 to 29 years
+B01001_036E,B01001e36,Female 30 to 34 years
+B01001_037E,B01001e37,Female 35 to 39 years
+B01001_038E,B01001e38,Female 40 to 44 years
+B01001_039E,B01001e39,Female 45 to 49 years
+B01001_040E,B01001e40,Female 50 to 54 years
+B01001_041E,B01001e41,Female 55 to 59 years
+B01001_042E,B01001e42,Female 60 and 61 years
+B01001_043E,B01001e43,Female 62 to 64 years
+B01001_044E,B01001e44,Female 65 and 66 years
+B01001_045E,B01001e45,Female 67 to 69 years
+B01001_046E,B01001e46,Female 70 to 74 years
+B01001_047E,B01001e47,Female 75 to 79 years
+B01001_048E,B01001e48,Female 80 to 84 years
+B01001_049E,B01001e49,Female 85 years and over
+B19013_001E,B19013e1,Median Household Income
+B19001_001E,B19001e1,Income basis
+B19001_002E,B19001e2,Less than $10 000
+B19001_003E,B19001e3,$10 000 to $14 999
+B19001_004E,B19001e4,$15 000 to $19 999
+B19001_005E,B19001e5,$20 000 to $24 999
+B19001_006E,B19001e6,$25 000 to $29 999
+B19001_007E,B19001e7,$30 000 to $34 999
+B19001_008E,B19001e8,$35 000 to $39 999
+B19001_009E,B19001e9,$40 000 to $44 999
+B19001_010E,B19001e10,$45 000 to $49 999
+B19001_011E,B19001e11,$50 000 to $59 999
+B19001_012E,B19001e12,$60 000 to $74 999
+B19001_013E,B19001e13,$75 000 to $99 999
+B19001_014E,B19001e14,$100 000 to $124 999
+B19001_015E,B19001e15,$125 000 to $149 999
+B19001_016E,B19001e16,$150 000 to $199 999
+B19001_017E,B19001e17,$200 000 or more
+B15003_001E,B15003e1,Education attainment basis
+B15003_002E,B15003e2,No schooling completed
+B15003_003E,B15003e3,Nursery school
+B15003_004E,B15003e4,Kindergarten
+B15003_005E,B15003e5,1st grade
+B15003_006E,B15003e6,2nd grade
+B15003_007E,B15003e7,3rd grade
+B15003_008E,B15003e8,4th grade
+B15003_009E,B15003e9,5th grade
+B15003_010E,B15003e10,6th grade
+B15003_011E,B15003e11,7th grade
+B15003_012E,B15003e12,8th grade
+B15003_013E,B15003e13,9th grade
+B15003_014E,B15003e14,10th grade
+B15003_015E,B15003e15,11th grade
+B15003_016E,B15003e16,12th grade no diploma
+B15003_017E,B15003e17,Regular high school diploma
+B15003_018E,B15003e18,GED or alternative credential
+B15003_019E,B15003e19,Some college less than 1 year
+B15003_020E,B15003e20,Some college 1 or more years no degree
+B15003_021E,B15003e21,Associates degree
+B15003_022E,B15003e22,Bachelors degree
+B15003_023E,B15003e23,Masters degree
+B15003_024E,B15003e24,Professional school degree
+B15003_025E,B15003e25,Doctorate degree
+B02001_001E,B02001e1,Race basis
+B02001_002E,B02001e2,White alone
+B02001_003E,B02001e3,Black or African American alone
+B02001_004E,B02001e4,American Indian and Alaskative alone
+B02001_005E,B02001e5,Asian alone
+B02001_006E,B02001e6,Native Hawaiian and Other Pacific Islander alone
+B02001_007E,B02001e7,Some other race alone
+B02001_008E,B02001e8,Two or more races
+B03003_001E,B03003e1,Hispanic basis
+B03003_002E,B03003e2,Not Hispanic basis
+B03003_003E,B03003e3,Hispanic or Latino basis
+B11001_001E,B11001e1,Household Type basis
+B11001_002E,B11001e2,Family Households
+B11001_007E,B11001e7,Nonfamily Households
+B23025_001E,B23025e1,Employment Status basis
+B23025_002E,B23025e2,Employment in the labor force 
+B23025_007E,B23025e7,Employment not in the labor force
+B09019_001E,B09019e1,Household basis for Presence of Children
+B09018_001E,B09018e1,Presence of children
+B25003_001E,B25003e1,Occupied Housing Basis
+B25003_002E,B25003e2,Owner occup
+B25003_003E,B25003e3,Renter occup
+B25044_009E,B25044e9,Renter Occupied Vehicles Basis; 
+B25044_010E,B25044e10,No vehicle available; Renter occupied
+B25044_011E,B25044e11,1 vehicle available; Renter occupied
+B25044_012E,B25044e12,2 vehicles available; Renter occupied
+B25044_013E,B25044e13,3 vehicles available; Renter occupied
+B25044_014E,B25044e14,4 vehicles available; Renter occupied
+B25044_015E,B25044e15,5 or more vehicles available; Renter occupied
+B25044_001E,B25044e1,Vehicles Basis
+B25044_002E,B25044e2,Owner Occupied Vehicles Basis; 
+B25044_003E,B25044e3,No vehicle available; Owner occupied
+B25044_004E,B25044e4,1 vehicle available; Owner occupied
+B25044_005E,B25044e5,2 vehicles available; Owner occupied
+B25044_006E,B25044e6,3 vehicles available; Owner occupied
+B25044_007E,B25044e7,4 vehicles available; Owner occupied
+B25044_008E,B25044e8,5 or more vehicles available; Owner occupied
+B11003_001E,B11003e1,Married vs Other Family Basis
+B11003_002E,B11003e2,Married-couple family
+B11003_008E,B11003e8,Other family
+B11003_003E,B11003e3,"Married-couple family, with own children under 18 years"
+B11003_010E,B11003e10,Male householder no spouse present; With own children of the householder under 18 years
+B11003_016E,B11003e16,Female householder no spouse present; With own children of the householder under 18 years
+B25040_001E,B25040e1,Total Household Fuel
+B25040_002E,B25040e2,Utility gas
+B25040_003E,B25040e3,"Bottled, tank, or LP gas"
+B25040_004E,B25040e4,Electricity
+B25040_005E,B25040e5,"Fuel oil, kerosene, etc."
+B25040_006E,B25040e6,Coal or coke
+B25040_007E,B25040e7,Wood
+B25040_008E,B25040e8,Solar energy
+B25040_009E,B25040e9,Other fuel
+B25040_010E,B25040e10,No fuel used
+B25041_001E,B25041e1,Total: Bedroom Basis
+B25041_002E,B25041e2,No bedroom
+B25041_003E,B25041e3,1 bedroom
+B25041_004E,B25041e4,2 bedrooms
+B25041_005E,B25041e5,3 bedrooms
+B25041_006E,B25041e6,4 bedrooms
+B25041_007E,B25041e7,5 or more bedrooms
+B25064_001E,B25064e1,Median Gross Rent
+B25105_001E,B25105e1,"Total: Median Monthly Housing Costs, Universe:  Occupied housing units"
+B11016_001E,B11016e1,Total: Household Size Basis
+B11016_002E,B11016e2,Family households:
+B11016_003E,B11016e3,2-person household
+B11016_004E,B11016e4,3-person household
+B11016_005E,B11016e5,4-person household
+B11016_006E,B11016e6,5-person household
+B11016_007E,B11016e7,6-person household
+B11016_008E,B11016e8,7-or-more person household
+B11016_009E,B11016e9,Nonfamily households:
+B11016_010E,B11016e10,1-person household
+B11016_011E,B11016e11,2-person household
+B11016_012E,B11016e12,3-person household
+B11016_013E,B11016e13,4-person household
+B11016_014E,B11016e14,5-person household
+B11016_015E,B11016e15,6-person household
+B11016_016E,B11016e16,7-or-more person household
