@@ -48,6 +48,9 @@ B01001_046E,B01001e46,Female 70 to 74 years
 B01001_047E,B01001e47,Female 75 to 79 years
 B01001_048E,B01001e48,Female 80 to 84 years
 B01001_049E,B01001e49,Female 85 years and over
+B09001_001E,B09001e1,Population under 18
+B11005_001E,B11005e1,Basis variable for households by age
+B11005_002E,B11005e2,Households with one or more people under 18 years old
 B19013_001E,B19013e1,Median Household Income
 B19001_001E,B19001e1,Income basis
 B19001_002E,B19001e2,Less than $10 000
